@@ -3,11 +3,13 @@ import {v4 as uuid} from 'uuid'
 
 function GifList({gifUrls}){
 
-    const gifImages = gifUrls.map(gifUrl => <img key={uuid()} src={gifUrl} alt="gif"/>)
+    const gifImages = gifUrls.map(gifUrl => <li key={uuid()} ><img src={gifUrl} alt="gif"/></li>)
 
     return (
         <div style={{display: "flex", flexDirection: "column"}}>
-            {gifImages}
+            <ul>
+                {gifImages}
+            </ul>
         </div>
     )
 }
